@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  
   server: {
     hmr: true,
     host: true,
@@ -22,7 +21,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['@phosphor-icons/react'], // Adicionamos esta linha
+      external: ['@phosphor-icons/react'],
     },
   },
 });
