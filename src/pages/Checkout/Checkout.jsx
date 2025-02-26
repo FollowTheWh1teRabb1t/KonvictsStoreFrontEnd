@@ -4,7 +4,7 @@ import Header from '../../components/header/header';
 import { useCart } from '../../context/cartContext';
 import { QRCodeCanvas } from 'qrcode.react';
 import priceIcon from '../../assets/priceIcon.png';
-import { PixLogo, CreditCard } from '../node_modules/@phosphor-icons/react';
+import { PixLogo, CreditCard } from '@phosphor-icons/react';
 import scarIcon from '../../assets/scarIcon.png';
 import geforceIcon from '../../assets/geforceIcon.png';
 import megaIcon from '../../assets/megaIcon.png';
