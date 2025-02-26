@@ -4,20 +4,25 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  
   server: {
     hmr: true,
-    host: true, // 'true' faz o Vite ser acessível na rede local
-    port: 5173, // Defina a porta que você deseja, caso queira usar outra porta
+    host: true,
+    port: 5173,
     proxy: {
-      // Caso queira fazer um proxy para seu backend (se estiver rodando na mesma máquina)
-      '/api': 'http://localhost:5001', // Ajuste conforme o seu backend
+      '/api': 'http://localhost:5001',
     },
     watch: {
-      usePolling: true, // Ajuda a detectar mudanças de arquivo
+      usePolling: true,
     },
-    cors: true, // Permite requisições CORS de qualquer origem (ajuste conforme necessário)
+    cors: true,
   },
   optimizeDeps: {
-    include: ['axios', 'swiper'], // Adicione outras dependências que precisam ser otimizadas
+    include: ['axios', 'swiper'],
+  },
+  build: {
+    rollupOptions: {
+      external: ['@phosphor-icons/react'], // Adicionamos esta linha
+    },
   },
 });
