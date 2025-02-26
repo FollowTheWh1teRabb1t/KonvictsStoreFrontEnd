@@ -4,7 +4,6 @@ import { AuthProvider } from './context/authContext';  // Importando useAuth
 import { CartProvider } from './context/cartContext';  // Importando o CartProvider
 import { GlobalStyles } from './styles/GlobalStyles';
 import HomePage from './pages/HomePage/HomePage';
-import ProductPage from './pages/ProductPage/ProductPage';
 import Login from './pages/Login/Login';
 import CreateAccount from './pages/CreateAccount/CreateAccount';
 import Checkout from './pages/Checkout/Checkout';
@@ -26,7 +25,6 @@ export default function App() {
                             <Route path="/" element={<HomePage />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/create" element={<CreateAccount />} />
-                            <Route path="/product/:productId" element={<ProductPage />} />
                             <Route path="/checkout" element={<Checkout />} />
                             <Route path="/contact" element={<Contact />} />
                             <Route path='/info' element={<Info />} />

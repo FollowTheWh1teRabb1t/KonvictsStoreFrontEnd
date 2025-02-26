@@ -32,7 +32,7 @@ const ContactForm = () => {
         <FormContainer>
         <img className="gamer" src={gamer} alt="gamer" />
         <h2>CENTRAL DE ATENDIMENTO</h2>
-        <p>Se preferir, entre em contato direto através do e-mail: <a href="mailto::konvictsGamerStore@email.comr">konvictsGamerStore@email.com</a></p>
+        <p>Se preferir, entre em contato direto através do e-mail: <a href="mailto::lplpfwr@gmail.com">konvictsGamerStore@email.com</a></p>
         
         <form onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Nome" value={formData.name} onChange={handleChange} required />
