@@ -6,6 +6,7 @@ import { Container } from './styles';
 import NavBarLogin from '../../components/navBarLogin/navBarLogin.jsx';
 import InputData from '../../components/input/input';
 import Button from '../../components/button/button.jsx';
+import axios from 'axios';
 
 export default function Login() {
     const navigate = useNavigate();
@@ -25,7 +26,15 @@ export default function Login() {
 
         try {
             setLoading(true);  // Iniciar carregamento
-            await login(email, password); // Use o login do contexto
+            // Enviar dados para o backend
+            const response = await axios.post('https://konvictsstorebackend.onrender.com/auth/login', {
+                email,
+                password,
+            });
+            // Armazenar o token JWT retornado pelo backend
+            const { token } = response.data;
+            localStorage.setItem('authToken', token);  // Armazenar o token
+            login(token); // Chamar função de login do contexto
             navigate('/'); // Redirecionar após o login
         } catch (error) {
             console.error('Erro ao fazer login:', error);

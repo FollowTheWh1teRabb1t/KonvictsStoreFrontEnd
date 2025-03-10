@@ -24,7 +24,7 @@ export default function CreateAccount() {
         console.log('Tentando registrar...');
         console.log('Dados enviados:', { userName, email, password });
         try {
-            const response = await axios.post('http://localhost:5001/auth/register', {
+            const response = await axios.post('https://konvictsstorebackend.onrender.com/auth/register', {
                 userName,
                 email,
                 password
